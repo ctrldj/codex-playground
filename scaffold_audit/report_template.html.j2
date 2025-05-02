@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Scaffold Audit Report – {{ drawing }}</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 2rem;
+      }
+      h1 {
+        margin-bottom: 0.5rem;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 1px solid #999;
+        padding: 0.5rem;
+      }
+      th {
+        background: #eee;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Scaffold Audit Report – {{ drawing }}</h1>
+    <p><strong>Total issues:</strong> {{ issue_count }}</p>
+
+    {% if issues %}
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Description</th>
+          <th>Location</th>
+          <th>Suggested Fix</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for issue in issues %}
+        <tr>
+          <td>{{ issue.id }}</td>
+          <td>{{ issue.description }}</td>
+          <td>{{ issue.location }}</td>
+          <td>{{ issue.suggested_fix or '-' }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+    <p>No issues detected 🎉</p>
+    {% endif %}
+  </body>
+</html>

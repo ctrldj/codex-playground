@@ -1,0 +1,14 @@
+"""Default audit rule-set.
+
+More sophisticated rules will be added over time.  The YAML structure is:
+
+rules:
+  - id: TR-001
+    description: Example rule – does nothing.
+    check: scaffold_audit.rules_builtin:always_pass
+"""
+
+rules:
+  - id: TR-001
+    description: Dummy rule – placeholder (always passes)
+    check: scaffold_audit.rules_builtin:always_pass

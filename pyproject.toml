@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "scaffold-audit"
+version = "0.1.0"
+description = "Automated scaffold drawing audit tool (AS/NZS 4576 & TG20:21)"
+authors = ["Codex CLI <codex@example.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+ezdxf = "^1.1"
+pythonocc-core = "^7.6" # optional heavy dependency; not used yet
+trimesh = "^4.0"
+opencv-python = {version = "^4.8", optional = true}
+jinja2 = "^3.1"
+pdfkit = "^1.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0"
+hypothesis = "^6.0"
+black = "^24.0"
+ruff = "^0.2.0"
+pyright = "^1.1"
+
+[tool.ruff]
+select = ["E", "F", "I", "B"]
+
+[tool.black]
+target-version = ['py311']
+line-length = 88
+
+[tool.pytest.ini_options]
+addopts = "-q"
+
+[build-system]
+requires = ["poetry-core>=1.5.0"]
+build-backend = "poetry.core.masonry.api"
