@@ -9,7 +9,10 @@ function runCodex(prompt, cwd = process.cwd()) {
   });
 }
 
-// Run it once
-runCodex("Create a README that says hello", "C:/Projects/codex-playground")
-  .then(output => console.log("Codex said:\n", output))
-  .catch(err => console.error("Codex failed:\n", err));
+module.exports = runCodex;
+
+if (require.main === module) {
+  runCodex("Create a README that says hello", "C:/Projects/codex-playground")
+    .then(output => console.log("Codex said:\n", output))
+    .catch(err => console.error("Codex failed:\n", err));
+}
