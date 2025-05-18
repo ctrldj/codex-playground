@@ -13,9 +13,7 @@
     "to": "^0.2.9"
   },
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "echo \"No test specified\" && exit 0"
   }
-}
-"scripts": {
-  "test": "echo \"No test specified\" && exit 0"
 }
