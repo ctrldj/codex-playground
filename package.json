@@ -16,3 +16,6 @@
     "prepare": "husky install"
   }
 }
+"scripts": {
+  "test": "echo \"No test specified\" && exit 0"
+}
