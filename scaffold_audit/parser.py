@@ -1,3 +1,4 @@
+## In one sentence, what this file does
 """DXF/DWG/PDF ingest and semantic entity extraction.
 
 This module is intentionally *very* lightweight at the moment – it only parses
@@ -10,15 +11,13 @@ from __future__ import annotations
 
 import pathlib
 from dataclasses import dataclass
-from typing import List, Tuple
 
 # ---------------------------------------------------------------------------
 # Optional *ezdxf* import – we provide a minimal stub for environments where the
 # dependency is unavailable (e.g. during CI sandboxing).  The stub only
 # implements the subset of the public API used by this package.
 # ---------------------------------------------------------------------------
-
-from types import SimpleNamespace
+from typing import List, Tuple
 
 try:
     import ezdxf  # type: ignore

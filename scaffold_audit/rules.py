@@ -1,3 +1,4 @@
+## In one sentence, what this file does
 """Rule engine – loads YAML rules and evaluates them against a drawing."""
 
 from __future__ import annotations
@@ -6,10 +7,36 @@ import importlib
 import pathlib
 from typing import Callable, Iterable, List
 
-import yaml
+try:
+    import yaml
+except ModuleNotFoundError:  # pragma: no cover – fallback for limited envs
+
+    def safe_load(text: str) -> dict:
+        """Very small YAML subset parser used when PyYAML is unavailable."""
+        lines = [line.strip() for line in text.splitlines() if line.strip()]
+        result: dict[str, list[dict[str, str]]] = {"rules": []}
+        current: dict[str, str] | None = None
+        for line in lines:
+            if line.startswith("rules:"):
+                if current:
+                    result["rules"].append(current)
+                    current = None
+                continue
+            if line.startswith("-"):
+                if current:
+                    result["rules"].append(current)
+                current = {"id": line.split(":", 1)[1].strip()}
+            elif line.startswith("description:") and current is not None:
+                current["description"] = line.split(":", 1)[1].strip()
+            elif line.startswith("check:") and current is not None:
+                current["check"] = line.split(":", 1)[1].strip()
+        if current:
+            result["rules"].append(current)
+        return result
+
+    yaml = type("_YamlStub", (), {"safe_load": staticmethod(safe_load)})()
 
 from .parser import ParsedDrawing
-
 
 # Type alias for rule check callbacks.
 CheckFn = Callable[[ParsedDrawing], Iterable[str]]

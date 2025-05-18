@@ -1,15 +1,38 @@
+## In one sentence, what this file does
 """HTML report generation via *Jinja2*."""
 
 from __future__ import annotations
 
 import pathlib
-from typing import Iterable
+from typing import TYPE_CHECKING, Iterable
 
-from jinja2 import Environment, PackageLoader, select_autoescape
+try:
+    from jinja2 import Environment, PackageLoader, select_autoescape
+except ModuleNotFoundError:  # pragma: no cover – fallback when Jinja2 missing
+    class _DummyEnv:
+        def __init__(self, *args: str, **kwargs: str) -> None:  # noqa: D401
+            """Ignore all arguments."""
 
-from .core import Issue
-from .parser import ParsedDrawing
+        def get_template(self, _name: str):
+            def render(**_kwargs: str) -> str:
+                return "<html><body><p>Report generation unavailable.</p></body></html>"
 
+            return type("_Template", (), {"render": staticmethod(render)})()
+
+    Environment = _DummyEnv  # type: ignore
+    class PackageLoader:  # type: ignore
+        def __init__(self, *args: str, **kwargs: str) -> None:
+            pass
+
+    def select_autoescape(*_args: str, **_kwargs: str) -> None:
+        """Fallback select_autoescape that does nothing."""
+        return None
+
+if TYPE_CHECKING:  # pragma: no cover - imports for type hints only
+    from .core import Issue
+    from .parser import ParsedDrawing
+else:  # pragma: no cover - keep names for runtime type checks
+    Issue = ParsedDrawing = object
 
 _env = Environment(
     loader=PackageLoader("scaffold_audit"),
