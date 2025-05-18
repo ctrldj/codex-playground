@@ -1,19 +1,23 @@
+## In one sentence, what this file does
 """Core auditing logic – orchestrates parsing, rule evaluation & reporting."""
 
 from __future__ import annotations
 
-import json
 import pathlib
 import sys
 from dataclasses import dataclass
-from typing import Any, Iterable, List
+from types import SimpleNamespace
+from typing import Any, List
 
 # External deps – imported lazily where possible to keep startup time low.
-import ezdxf  # type: ignore  # noqa: F401  # (ensure hard dep is declared)
+try:
+    import ezdxf  # type: ignore  # noqa: F401  # real dependency if available
+except ModuleNotFoundError:  # pragma: no cover - CI environments
+    ezdxf = SimpleNamespace()  # type: ignore[var-annotated]
 
 from .parser import ParsedDrawing, parse_drawing
-from .rules import Rule, RuleEngine, load_rules
 from .report import generate_html_report
+from .rules import RuleEngine, load_rules
 
 __all__: list[str] = [
     "Issue",

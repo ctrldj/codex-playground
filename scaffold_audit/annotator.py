@@ -1,3 +1,4 @@
+## In one sentence, what this file does
 """Annotates DXF drawings with audit issues.
 
 This is currently a *very* thin wrapper that simply copies the original file –
@@ -10,8 +11,6 @@ from __future__ import annotations
 import pathlib
 import shutil
 from typing import Iterable
-
-import ezdxf  # type: ignore
 
 from .core import Issue
 

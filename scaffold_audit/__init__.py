@@ -1,10 +1,10 @@
+## In one sentence, what this file does
 """Top-level package for Scaffold Audit Tool.
 
 Contains version information and central exports.
 """
 
 from importlib import metadata
-
 
 __all__: list[str] = [
     "__version__",
