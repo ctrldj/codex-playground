@@ -54,6 +54,11 @@ def create_job_structure(
         if dst.exists():
             continue
 
+        # Skip if the template file is missing
+        if not src.exists():
+            print(f"Template missing: {src}")
+            continue
+
         # Copy file metadata as well (e.g., modification time)
         shutil.copy2(src, dst)
         created_files.append(dst)
@@ -66,11 +71,27 @@ def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description="Create a job folder from templates")
     parser.add_argument("client_name", help="Name of the client")
     parser.add_argument("job_name", help="Name of the job")
+    parser.add_argument(
+        "--base-dir",
+        default=str(BASE_DIR),
+        help="Folder that stores all client jobs",
+    )
+    parser.add_argument(
+        "--template-dir",
+        default=str(TEMPLATE_DIR),
+        help="Folder containing template documents",
+    )
     args = parser.parse_args(argv)
 
-    files = create_job_structure(args.client_name, args.job_name)
+    files = create_job_structure(
+        args.client_name,
+        args.job_name,
+        base_dir=Path(args.base_dir),
+        template_dir=Path(args.template_dir),
+    )
 
-    print(f"Created job folder at: {BASE_DIR / args.client_name / args.job_name}")
+    job_folder = Path(args.base_dir) / args.client_name / args.job_name
+    print(f"Created job folder at: {job_folder}")
     for f in files:
         print(f"Copied {f.name}")
 
