@@ -8,7 +8,8 @@ conversation so that you can easily resume work in a later session.
 ## What has been implemented
 
 1. Git repository initialised (`main` branch, empty root commit).
-2. Python package `scaffold_audit` scaffolded with:
+2. Python package `scaffold_audit` scaffolded with (now located under
+   `alta-monorepo/apps/scaffold-audit/src`):
    * CLI (`python -m scaffold_audit <drawing.dxf>`)
    * Core pipeline (parse → rule engine → annotate → report)
    * YAML-based rule loading (with placeholder rule that always passes)

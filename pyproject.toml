@@ -6,6 +6,11 @@ authors = ["Codex CLI <codex@example.com>"]
 license = "MIT"
 readme = "README.md"
 
+# Point Poetry to the relocated package under the monorepo
+packages = [
+    { include = "scaffold_audit", from = "alta-monorepo/apps/scaffold-audit/src" },
+]
+
 [tool.poetry.dependencies]
 python = "^3.11"
 ezdxf = "^1.1"
