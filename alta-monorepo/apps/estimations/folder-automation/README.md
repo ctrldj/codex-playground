@@ -6,3 +6,8 @@ After following the setup steps in the repository `README.md`, run it with:
 ```powershell
 python -m folder_automation "ClientName" "JobName"
 ```
+
+Or launch the graphical interface:
+```powershell
+python -m folder_automation.gui
+```

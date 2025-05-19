@@ -31,6 +31,10 @@ Simple instructions for installing and using the scaffold audit tools.
   ```powershell
   python -m folder_automation "ClientName" "JobName"
   ```
+  # Or launch the graphical interface
+  ```powershell
+  python -m folder_automation.gui
+  ```
 
 ## Glossary
 
@@ -38,6 +42,7 @@ Simple instructions for installing and using the scaffold audit tools.
 - **Audit** – Automatic check of a drawing against safety rules.
 - **Stub** – Lightweight placeholder module used when a dependency is missing.
 - **Template** – A starter document copied into each new job folder.
+- **GUI** – Graphical User Interface that lets you interact via buttons instead of the command line.
 
 ## Monorepo layout
 
