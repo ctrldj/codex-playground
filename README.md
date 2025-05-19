@@ -33,3 +33,7 @@ Automated 2-D scaffold drawing auditor compliant with **AS/NZS 4576** and **TG20
 - **DXF** – Drawing Exchange Format used by many CAD programs.
 - **Audit** – Automatic check of a drawing against safety rules.
 - **Stub** – Lightweight placeholder module used when a dependency is missing.
+
+## Monorepo layout
+
+The `alta-monorepo/` folder contains all future tools. Each app lives under `apps/` with its own `src/` and `tests/` folders. Reusable modules are kept in `libs/`.
