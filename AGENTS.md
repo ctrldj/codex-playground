@@ -35,6 +35,17 @@ fix(build): pin ruff version
 
 
 ## 5. Testing Quick Start
+-  All code, scripts, and automations must include automated tests whenever possible.
+- Use the following frameworks:
+    - Python: `pytest`
+    - JavaScript/Node: `jest` (unit), `playwright` or `cypress` (UI)
+    - PowerShell: `Pester`
+- Include unit tests for core logic, integration tests for multi-system workflows, and workflow tests for user interfaces.
+- Tests should be self-contained; mock external dependencies if necessary.
+- Always add a brief README or comment explaining how to run the tests.
+- All main logic must be covered by at least one automated test.
+- Where possible, add GitHub Actions or similar workflows to run tests automatically.
+- If a bug is found or a test fails, provide a clear error message or a prompt to the user with suggested next steps.
 - Run tests with the local script because the real **pytest** package is missing.
   ```powershell
   python pytest.py alta-monorepo/apps/scaffold-audit/tests
