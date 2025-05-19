@@ -31,6 +31,14 @@ Simple instructions for installing and using the scaffold audit tools.
   ```powershell
   python -m folder_automation "ClientName" "JobName"
   ```
+- Launch the graphical interface
+  ```powershell
+  python -m folder_automation.gui
+  ```
+- Build a standalone `.exe`
+  ```powershell
+  python -m folder_automation.build_exe
+  ```
 
 ## Glossary
 
@@ -38,6 +46,7 @@ Simple instructions for installing and using the scaffold audit tools.
 - **Audit** – Automatic check of a drawing against safety rules.
 - **Stub** – Lightweight placeholder module used when a dependency is missing.
 - **Template** – A starter document copied into each new job folder.
+- **PyInstaller** – Tool that packages Python apps into standalone executables.
 
 ## Monorepo layout
 

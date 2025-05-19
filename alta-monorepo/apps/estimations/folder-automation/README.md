@@ -6,3 +6,13 @@ After following the setup steps in the repository `README.md`, run it with:
 ```powershell
 python -m folder_automation "ClientName" "JobName"
 ```
+
+For a point-and-click interface run:
+```powershell
+python -m folder_automation.gui
+```
+
+To build a Windows executable (requires PyInstaller):
+```powershell
+python -m folder_automation.build_exe
+```

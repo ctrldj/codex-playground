@@ -12,6 +12,8 @@ from pathlib import Path
 # Make the package importable during tests
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
+from folder_automation.build_exe import main as build_exe_main
+from folder_automation.gui import run_gui
 from folder_automation.main import TEMPLATES, create_job_structure
 
 
@@ -55,6 +57,14 @@ class TestJobFolderAutomation(unittest.TestCase):
             "Acme", "Job2", base_dir=self.base_dir, template_dir=self.template_dir
         )
         self.assertEqual(files, [])
+
+    def test_gui_callable(self) -> None:
+        # Ensure the GUI entry point exists and is callable
+        self.assertTrue(callable(run_gui))
+
+    def test_build_exe_callable(self) -> None:
+        # Ensure the build_exe entry point exists and is callable
+        self.assertTrue(callable(build_exe_main))
 
 
 if __name__ == "__main__":  # pragma: no cover
