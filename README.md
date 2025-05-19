@@ -1,12 +1,3 @@
-## In one sentence, what this file does
-Documentation for setting up and using the Scaffold Audit Tool.
-
-# Scaffold Audit Tool
-
-Automated 2-D scaffold drawing auditor compliant with **AS/NZS 4576** and **TG20:21**.
-
-The source code now resides under `alta-monorepo/apps/scaffold-audit/src`.
-
 ## Setup
 
 - Create and activate a virtual environment
