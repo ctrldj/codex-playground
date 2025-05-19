@@ -37,6 +37,15 @@ Simple instructions for installing and using the scaffold audit tools.
   ```powershell
   python -m folder_automation.gui
   ```
+- Open the graphical interface
+  ```powershell
+  python -m folder_automation.gui
+  ```
+- Build a Windows ``.exe`` (requires `pyinstaller`)
+  ```powershell
+  pip install pyinstaller
+  python -m folder_automation.build_exe
+  ```
 
 ## Glossary
 
