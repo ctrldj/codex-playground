@@ -22,8 +22,7 @@ pip install pyinstaller
 python -m folder_automation.build_exe
 ```
 The `folder_automation_gui.exe` file will appear in the `dist` folder.
-
-Or launch the graphical interface:
+Run the generated executable without Python:
 ```powershell
-python -m folder_automation.gui
+dist\folder_automation_gui.exe
 ```

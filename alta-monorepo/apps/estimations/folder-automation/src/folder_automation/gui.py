@@ -3,11 +3,21 @@
 
 from __future__ import annotations
 
+import sys
 import tkinter as tk
 from pathlib import Path
 from tkinter import messagebox
 
-from .main import BASE_DIR, TEMPLATE_DIR, create_job_structure
+try:
+    # Standard import when executed as ``python -m folder_automation.gui``
+    from .main import BASE_DIR, TEMPLATE_DIR, create_job_structure
+except ImportError:  # pragma: no cover - allow ``python gui.py``
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+    from folder_automation.main import (
+        BASE_DIR,
+        TEMPLATE_DIR,
+        create_job_structure,
+    )
 
 
 def run_gui() -> None:

@@ -37,13 +37,17 @@ Simple instructions for installing and using the scaffold audit tools.
   ```powershell
   python -m folder_automation.gui
   ```
-- Open the graphical interface
-  ```powershell
-  python -m folder_automation.gui
-  ```
 - Build a Windows ``.exe`` (requires `pyinstaller`)
   ```powershell
   pip install pyinstaller
+  python -m folder_automation.build_exe
+  ```
+- After building, run the executable without Python
+  ```powershell
+  dist\folder_automation_gui.exe
+  ```
+- If you see an ``ImportError`` running ``build_exe.py`` directly, run it as a module instead:
+  ```powershell
   python -m folder_automation.build_exe
   ```
 
