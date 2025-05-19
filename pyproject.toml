@@ -1,3 +1,5 @@
+## In one sentence, what this file does
+# Build and package configuration for the project
 [tool.poetry]
 name = "scaffold-audit"
 version = "0.1.0"
@@ -15,7 +17,7 @@ packages = [
 [tool.poetry.dependencies]
 python = "^3.11"
 ezdxf = "^1.1"
-pythonocc-core = "^7.6" # optional heavy dependency; not used yet
+# pythonocc-core = "^7.6" # optional heavy dependency; not used yet
 trimesh = "^4.0"
 opencv-python = {version = "^4.8", optional = true}
 jinja2 = "^3.1"

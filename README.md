@@ -1,3 +1,6 @@
+## In one sentence, what this file does
+Simple instructions for installing and using the scaffold audit tools.
+
 ## Setup
 
 - Create and activate a virtual environment
@@ -8,6 +11,10 @@
 - Install the package in editable mode
   ```powershell
   pip install -e .
+  ```
+  # Optional: install pythonocc-core if you need 3D features
+  ```powershell
+  pip install pythonocc-core==7.6
   ```
 
 ## How to run
