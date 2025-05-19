@@ -151,6 +151,7 @@ imports:
  &#8226;   <a href="#encodings.uu_codec">encodings.uu_codec</a>
  &#8226;   <a href="#encodings.zlib_codec">encodings.zlib_codec</a>
  &#8226;   <a href="#enum">enum</a>
+ &#8226;   <a href="#folder_automation.main">folder_automation.main</a>
  &#8226;   <a href="#functools">functools</a>
  &#8226;   <a href="#genericpath">genericpath</a>
  &#8226;   <a href="#heapq">heapq</a>
@@ -175,6 +176,7 @@ imports:
  &#8226;   <a href="#sre_constants">sre_constants</a>
  &#8226;   <a href="#sre_parse">sre_parse</a>
  &#8226;   <a href="#stat">stat</a>
+ &#8226;   <a href="#sys">sys</a>
  &#8226;   <a href="#tkinter">tkinter</a>
  &#8226;   <a href="#tkinter.messagebox">tkinter.messagebox</a>
  &#8226;   <a href="#traceback">traceback</a>
@@ -278,6 +280,8 @@ imported by:
 <span class="moduletype">SourceModule</span>  <div class="import">
 imported by:
     <a href="#_colorize">_colorize</a>
+ &#8226;   <a href="#folder_automation.gui">folder_automation.gui</a>
+ &#8226;   <a href="#folder_automation.main">folder_automation.main</a>
  &#8226;   <a href="#gui.py">gui.py</a>
  &#8226;   <a href="#importlib.metadata">importlib.metadata</a>
  &#8226;   <a href="#importlib.metadata._meta">importlib.metadata._meta</a>
@@ -1178,6 +1182,7 @@ imported by:
     <a href="#ast">ast</a>
  &#8226;   <a href="#calendar">calendar</a>
  &#8226;   <a href="#dis">dis</a>
+ &#8226;   <a href="#folder_automation.main">folder_automation.main</a>
  &#8226;   <a href="#gzip">gzip</a>
  &#8226;   <a href="#inspect">inspect</a>
  &#8226;   <a href="#py_compile">py_compile</a>
@@ -4802,6 +4807,68 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="folder_automation"></a>
+  <a target="code" href="///C:/Projects/codex-playground/alta-monorepo/apps/estimations/folder-automation/src/folder_automation/__init__.py" type="text/plain"><tt>folder_automation</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#folder_automation.gui">folder_automation.gui</a>
+ &#8226;   <a href="#folder_automation.main">folder_automation.main</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#folder_automation.gui">folder_automation.gui</a>
+ &#8226;   <a href="#folder_automation.main">folder_automation.main</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="folder_automation.gui"></a>
+  <a target="code" href="///C:/Projects/codex-playground/alta-monorepo/apps/estimations/folder-automation/src/folder_automation/gui.py" type="text/plain"><tt>folder_automation.gui</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#__future__">__future__</a>
+ &#8226;   <a href="#folder_automation">folder_automation</a>
+ &#8226;   <a href="#folder_automation.main">folder_automation.main</a>
+ &#8226;   <a href="#pathlib">pathlib</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#tkinter">tkinter</a>
+ &#8226;   <a href="#tkinter.messagebox">tkinter.messagebox</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#folder_automation">folder_automation</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="folder_automation.main"></a>
+  <a target="code" href="///C:/Projects/codex-playground/alta-monorepo/apps/estimations/folder-automation/src/folder_automation/main.py" type="text/plain"><tt>folder_automation.main</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#__future__">__future__</a>
+ &#8226;   <a href="#argparse">argparse</a>
+ &#8226;   <a href="#folder_automation">folder_automation</a>
+ &#8226;   <a href="#pathlib">pathlib</a>
+ &#8226;   <a href="#shutil">shutil</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#folder_automation">folder_automation</a>
+ &#8226;   <a href="#folder_automation.gui">folder_automation.gui</a>
+ &#8226;   <a href="#gui.py">gui.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="fractions"></a>
   <a target="code" href="///C:/Python313/Lib/fractions.py" type="text/plain"><tt>fractions</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
@@ -6144,7 +6211,9 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#gui.py">gui.py</a>
+    <a href="#folder_automation.gui">folder_automation.gui</a>
+ &#8226;   <a href="#folder_automation.main">folder_automation.main</a>
+ &#8226;   <a href="#gui.py">gui.py</a>
  &#8226;   <a href="#importlib.metadata">importlib.metadata</a>
  &#8226;   <a href="#importlib.resources._common">importlib.resources._common</a>
  &#8226;   <a href="#importlib.resources.abc">importlib.resources.abc</a>
@@ -6647,6 +6716,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#argparse">argparse</a>
+ &#8226;   <a href="#folder_automation.main">folder_automation.main</a>
  &#8226;   <a href="#tarfile">tarfile</a>
  &#8226;   <a href="#tempfile">tempfile</a>
  &#8226;   <a href="#zipfile">zipfile</a>
@@ -6923,10 +6993,12 @@ imported by:
  &#8226;   <a href="#encodings.utf_16">encodings.utf_16</a>
  &#8226;   <a href="#encodings.utf_32">encodings.utf_32</a>
  &#8226;   <a href="#enum">enum</a>
+ &#8226;   <a href="#folder_automation.gui">folder_automation.gui</a>
  &#8226;   <a href="#fractions">fractions</a>
  &#8226;   <a href="#getopt">getopt</a>
  &#8226;   <a href="#gettext">gettext</a>
  &#8226;   <a href="#glob">glob</a>
+ &#8226;   <a href="#gui.py">gui.py</a>
  &#8226;   <a href="#gzip">gzip</a>
  &#8226;   <a href="#importlib">importlib</a>
  &#8226;   <a href="#importlib._bootstrap_external">importlib._bootstrap_external</a>
@@ -7125,7 +7197,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#gui.py">gui.py</a>
+    <a href="#folder_automation.gui">folder_automation.gui</a>
+ &#8226;   <a href="#gui.py">gui.py</a>
  &#8226;   <a href="#tkinter.commondialog">tkinter.commondialog</a>
  &#8226;   <a href="#tkinter.constants">tkinter.constants</a>
  &#8226;   <a href="#tkinter.messagebox">tkinter.messagebox</a>
@@ -7177,7 +7250,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#gui.py">gui.py</a>
+    <a href="#folder_automation.gui">folder_automation.gui</a>
+ &#8226;   <a href="#gui.py">gui.py</a>
  &#8226;   <a href="#tkinter">tkinter</a>
 
   </div>
