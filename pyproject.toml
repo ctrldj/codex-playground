@@ -9,6 +9,7 @@ readme = "README.md"
 # Point Poetry to the relocated package under the monorepo
 packages = [
     { include = "scaffold_audit", from = "alta-monorepo/apps/scaffold-audit/src" },
+    { include = "folder_automation", from = "alta-monorepo/apps/estimations/folder-automation/src" },
 ]
 
 [tool.poetry.dependencies]

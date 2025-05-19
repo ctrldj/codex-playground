@@ -1,7 +1,7 @@
 ## In one sentence, what this folder does
-This folder holds the **folder-automation** tool. It creates project folders automatically.
+This folder contains the **folder-automation** tool. It sets up client job folders with template documents.
 
-Follow the setup guide in the root `README.md`, then run:
+After following the setup steps in the repository `README.md`, run it with:
 ```powershell
-python -m folder_automation
+python -m folder_automation "ClientName" "JobName"
 ```

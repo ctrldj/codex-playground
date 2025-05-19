@@ -29,12 +29,17 @@ The source code now resides under `alta-monorepo/apps/scaffold-audit/src`.
   ```powershell
   python pytest.py alta-monorepo/apps/scaffold-audit/tests
   ```
+- Create a job folder
+  ```powershell
+  python -m folder_automation "ClientName" "JobName"
+  ```
 
 ## Glossary
 
 - **DXF** – Drawing Exchange Format used by many CAD programs.
 - **Audit** – Automatic check of a drawing against safety rules.
 - **Stub** – Lightweight placeholder module used when a dependency is missing.
+- **Template** – A starter document copied into each new job folder.
 
 ## Monorepo layout
 
