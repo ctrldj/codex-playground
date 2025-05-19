@@ -42,3 +42,4 @@ Simple instructions for installing and using the scaffold audit tools.
 ## Monorepo layout
 
 The `alta-monorepo/` folder contains all future tools. Each app lives under `apps/` with its own `src/` and `tests/` folders. Reusable modules are kept in `libs/`.
+The **folder-automation** module was moved from the `libs/` directory and now lives in `alta-monorepo/apps/estimations/folder-automation`.
