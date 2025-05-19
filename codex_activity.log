@@ -34,6 +34,3 @@
 2025-05-19T09:57:56Z,add main entry,success
 2025-05-19T09:57:58Z,ruff fix,success
 2025-05-19T09:57:59Z,pytest,success
-2025-05-19T10:13:42Z,add gui,started
-2025-05-19T10:14:00Z,ruff fix,success
-2025-05-19T10:14:02Z,pytest,success

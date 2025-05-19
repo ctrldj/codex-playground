@@ -29,7 +29,9 @@ Simple instructions for installing and using the scaffold audit tools.
   ```
 - Create a job folder
   ```powershell
-  python -m folder_automation "ClientName" "JobName"
+  # Provide paths if the defaults do not match your system
+  python -m folder_automation "ClientName" "JobName" \
+    --base-dir C:\path\to\Clients --template-dir C:\path\to\Templates
   ```
   # Or launch the graphical interface
   ```powershell
