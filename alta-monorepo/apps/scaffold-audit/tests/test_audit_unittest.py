@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 import subprocess
 import sys
 import tempfile
@@ -26,10 +27,16 @@ class TestAuditCLI(unittest.TestCase):
             dxf_path = tmp_dir / "dummy.dxf"
             self._create_dummy_dxf(dxf_path)
 
+            env = os.environ.copy()
+            env["PYTHONPATH"] = str(
+                Path(__file__).resolve().parents[1] / "src"
+            )
+
             proc = subprocess.run(
                 [sys.executable, "-m", "scaffold_audit", str(dxf_path)],
                 capture_output=True,
                 text=True,
+                env=env,
             )
 
             # Exit code should be 0 as there are no issues.
