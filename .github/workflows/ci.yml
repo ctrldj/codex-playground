@@ -1,0 +1,25 @@
+## In one sentence, what this file does
+GitHub Actions workflow to test and build the Alta Estimator.
+
+name: CI
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -r alta_estimator/requirements.txt
+      - name: Run tests
+        run: python pytest.py alta_estimator/tests
+      - name: Build exe
+        run: |
+          pip install pyinstaller
+          pyinstaller alta_estimator/alta.spec
