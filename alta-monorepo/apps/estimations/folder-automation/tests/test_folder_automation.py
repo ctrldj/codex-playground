@@ -56,6 +56,20 @@ class TestJobFolderAutomation(unittest.TestCase):
         )
         self.assertEqual(files, [])
 
+    def test_create_job_structure_creates_subdir_file(self) -> None:
+        files = create_job_structure(
+            "Beta", "Job3", base_dir=self.base_dir, template_dir=self.template_dir
+        )
+        nested = (
+            self.base_dir
+            / "Beta"
+            / "Job3"
+            / "Handover"
+            / "Inspection Certificate Job3.pdf"
+        )
+        self.assertIn(nested, files)
+        self.assertTrue(nested.exists())
+
 
 if __name__ == "__main__":  # pragma: no cover
     unittest.main()

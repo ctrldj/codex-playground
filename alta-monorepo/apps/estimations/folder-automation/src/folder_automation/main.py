@@ -59,6 +59,9 @@ def create_job_structure(
             print(f"Template missing: {src}")
             continue
 
+        # Ensure any nested directories exist before copying
+        dst.parent.mkdir(parents=True, exist_ok=True)
+
         # Copy file metadata as well (e.g., modification time)
         shutil.copy2(src, dst)
         created_files.append(dst)
