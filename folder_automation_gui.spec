@@ -2,7 +2,7 @@
 
 
 a = Analysis(
-    ['C:\\Projects\\codex-playground\\alta-monorepo\\apps\\estimations\\folder-automation\\src\\folder_automation\\gui.py'],
+    ['C:\\Users\\jknig\\codex-playground\\alta-monorepo\\apps\\estimations\\folder-automation\\src\\folder_automation\\gui.py'],
     pathex=[],
     binaries=[],
     datas=[],
