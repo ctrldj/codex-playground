@@ -9,19 +9,19 @@ import shutil
 from pathlib import Path
 
 # Default locations (Windows paths). Adjust if running on another OS.
-BASE_DIR = Path(r"C:\Users\knigh\Sync\ALTA Front\Clients")
-TEMPLATE_DIR = Path(r"C:\Users\knigh\Sync\ALTA Front\Templates")
+BASE_DIR = Path(r"C:\Users\jknig\Sync\ALTA Front\Clients")
+TEMPLATE_DIR = Path(r"C:\Users\jknig\Sync\ALTA Front\Templates")
 
 # Mapping of template filename to output filename pattern
 TEMPLATES = {
-    "[Gear List]-Blank ALTA Gear List.xlsx": "{job}Gearlist.xlsx",
-    "[Quote][SingleStage][NewClient]-Template.docx": "{job} Quotation.docx",
-    "ASWHS005 SWMS Version 13 2022.docx": "{job} SWMS.docx",
+    "[Gear List]-Blank ALTA Gear List.xlsx": "Gear {job}.xlsx",
+    "[Quote][SingleStage][NewClient]-Template.docx": "Quotation {job}.docx",
+    "ASWHS005 SWMS Version 13 2022.docx": "SWMS {job}.docx",
     # Long file name split for readability
     "Blank ALTA Handover_Inspection Report 2024.pdf": (
-        "{job} HandoverInspectionCertificate.pdf"
+        "Handover/Inspection Certificate {job}.pdf"
     ),
-    "Project Plan-Blank ALTA Project Plan.docx": "{job} ProjectPlan.docx",
+    "Project Plan-Blank ALTA Project Plan.docx": "Project Plan {job}.docx",
 }
 
 
